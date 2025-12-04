@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Product Detail Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#195de6",
+              "background-light": "#f6f6f8",
+              "background-dark": "#111621",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<header class="sticky top-0 z-20 w-full bg-white dark:bg-background-dark/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
+<div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2 text-gray-800 dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold">Wholesale Direct</h2>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Home</a>
+<a class="text-sm font-medium text-primary dark:text-primary font-semibold" href="#">Categories</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">My Orders</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<label class="sr-only" for="search"> Search </label>
+<input class="form-input w-full rounded-lg border-none bg-gray-100 dark:bg-gray-800/50 pl-10 pr-4 text-sm h-10 placeholder:text-gray-500" id="search" placeholder="Search products..." type="search"/>
+<div class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+</div>
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-800/50 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-800/50 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAPs0Giq7ErYLe2hahFpDOnceEGkGqZHJdMFOfXumValbVfodhs15eNFf6IjCz90RxAFF1-PvX0mlEeqaD4HRBSWmxdON2ddClbVWnHD6idSoQb2i3RlASdttyUG9BOVA4jURsowmjsvF6ODTYGuQWNHlutDby4kkadGZXg_XTk5-lpeQT6bSCk9OjnHXZDeATGvWnSPzRZLrOlWR85kx1qsuMn5OEnA6gGKLwINeOaWCUFBmuKknEsNqamAv9QICmVnMloyRFRUVc");'></div>
+</div>
+</div>
+</div>
+</header>
+<main class="mx-auto w-full max-w-screen-xl px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+<div class="flex flex-wrap gap-2 mb-6">
+<a class="text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal hover:text-primary" href="#">Home</a>
+<span class="text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal">/</span>
+<a class="text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal hover:text-primary" href="#">Apparel</a>
+<span class="text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal">/</span>
+<span class="text-gray-800 dark:text-gray-200 text-sm font-medium leading-normal">Organic Cotton T-Shirts</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+<div class="flex flex-col gap-4">
+<div class="bg-center bg-no-repeat aspect-[4/3] w-full bg-cover rounded-xl shadow-sm border border-gray-200 dark:border-gray-800" data-alt="Main product image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBlBOlkdqzXrI7Ap_2VczmsVQNo7EYX37QGsItrSPeqNyhABE4NIePlgbQwqYePFFKFhqZg1zZaRGmYukFi_3zHxZOWKxwe70Pqqxinz5A3nG5KySKy9JWNBA-GI06vg7QmXbPMzA3bj8btkIq-UczferSezFJ4Xn9J_4Lt2jTzSBoFgtYF35Ge1S0vqZAx25cte1ZrUpnp86RMHLZ-X49LK2QnRM8TL1IMSpw2nJfcsPICK29tO1UVOZdnbdLuc-pcdIw7uTxS8NA");'></div>
+<div class="grid grid-cols-4 gap-4">
+<div class="bg-center bg-no-repeat aspect-square w-full bg-cover rounded-lg border-2 border-primary" data-alt="Thumbnail 1" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBlBOlkdqzXrI7Ap_2VczmsVQNo7EYX37QGsItrSPeqNyhABE4NIePlgbQwqYePFFKFhqZg1zZaRGmYukFi_3zHxZOWKxwe70Pqqxinz5A3nG5KySKy9JWNBA-GI06vg7QmXbPMzA3bj8btkIq-UczferSezFJ4Xn9J_4Lt2jTzSBoFgtYF35Ge1S0vqZAx25cte1ZrUpnp86RMHLZ-X49LK2QnRM8TL1IMSpw2nJfcsPICK29tO1UVOZdnbdLuc-pcdIw7uTxS8NA");'></div>
+<div class="bg-center bg-no-repeat aspect-square w-full bg-cover rounded-lg border border-gray-200 dark:border-gray-800 hover:border-primary cursor-pointer" data-alt="Thumbnail 2" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB8aOqhYw9ij4WLwE8sGBEEMsLaFr-hvLEKx6MN6BAaMM5ASfm2UudD5tdV7DFeGiZD-q4PFHMN5KVSo6Y2BmWSkggwDBwt7fPTO_oWLxrMMWgZu401dDgH03ir0G1LDrowRlXe-8Y9Vd4lo730kjU5vRjx4w9ncYg-5Q7XAlFl1p2pSzQ7st86bApUIHn4aGQXYbffn3nr1uChzByyMDNL8S_cVbcPCcIfSNOU6b40dHVEXIXOhZ1uzoQ-ZtJVFx9Onrhc-ZXziQk");'></div>
+<div class="bg-center bg-no-repeat aspect-square w-full bg-cover rounded-lg border border-gray-200 dark:border-gray-800 hover:border-primary cursor-pointer" data-alt="Thumbnail 3" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBIXrUMkvIE8Pmm3aHMF1hzZAUB71FrKxPdPD9TmIqVISEoARU_aQaEmQfucD04EJVD0AwGqNwFb-13YFMID-TW8BBcmSSRfV4Y9zKtGs9kg6jXLDyF5hgGOamA9Zpg9zV9OJTuSaKZ3VUJuDVrGZtxIyak8J5DIHWgToz4efpUbNY1CnnXMD1_wZIgEHG5La5Dez6qSfMIjkSZNSEwXm6I9ahuXbQCMniZkFTFdDGhYwIu63pAcTyo_5M23auuw1u6SiyBrmUI2jg");'></div>
+<div class="bg-center bg-no-repeat aspect-square w-full bg-cover rounded-lg border border-gray-200 dark:border-gray-800 hover:border-primary cursor-pointer" data-alt="Thumbnail 4" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDh4C-ku0Bwm6FWcfHMpfnz_z0ULxTspOY186NorR2vXv1gG7pvLSV92U-219g_geREv_7irMpy5-wFyH41d6pjzAMme0b5VtSLysWgBSHkD3FqFJ30gWW1ubNXH_ofNNoChITbSUZ4KKD3spoOJT3jLOFdzV9-cGyU6vJRFf3Tdj4uBkORrCT-ZNqN-xImr2Qyt3IHayv2_8N6OHfWJobbqwL81heB4ic2hELCQAAlQQw2ReO3aGGOfgRBS6lEQ58eIsdi4NnhR7w");'></div>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h1 class="text-gray-900 dark:text-white text-3xl md:text-4xl font-black tracking-tight">Organic Cotton T-Shirts</h1>
+</div>
+<div class="flex items-center gap-2 mt-2">
+<p class="text-gray-600 dark:text-gray-400">by</p>
+<a class="flex items-center gap-1 text-primary font-semibold" href="#">
+<span>Apparel Co.</span>
+<span class="material-symbols-outlined !text-base text-green-500">verified</span>
+</a>
+</div>
+<div class="mt-6">
+<p class="text-3xl font-bold text-gray-800 dark:text-gray-200">
+                                Starting at ₦5,000 <span class="text-base font-normal text-gray-500 dark:text-gray-400">/ unit</span>
+</p>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Minimum order: 50 units</p>
+</div>
+<div class="mt-6 p-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900/50">
+<h3 class="text-base font-bold text-gray-900 dark:text-white">Bulk Pricing Table</h3>
+<table class="w-full mt-2 text-sm text-left text-gray-600 dark:text-gray-400">
+<thead>
+<tr class="border-b border-gray-200 dark:border-gray-700">
+<th class="py-2 font-medium">Quantity</th>
+<th class="py-2 font-medium text-right">Price per unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="py-2">10 - 50 units</td>
+<td class="py-2 text-right font-semibold text-gray-800 dark:text-gray-200">₦5,000</td>
+</tr>
+<tr class="border-t border-gray-200 dark:border-gray-700">
+<td class="py-2">51 - 100 units</td>
+<td class="py-2 text-right font-semibold text-gray-800 dark:text-gray-200">₦4,800</td>
+</tr>
+<tr class="border-t border-gray-200 dark:border-gray-700">
+<td class="py-2">100+ units</td>
+<td class="py-2 text-right font-semibold text-gray-800 dark:text-gray-200">₦4,500</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+<button class="w-full flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-primary text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-4">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+<span>Add to Cart</span>
+</button>
+<button class="w-full flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-gray-100 dark:bg-gray-800/50 text-gray-800 dark:text-gray-200 gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-4 hover:bg-gray-200 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined">chat</span>
+<span>Chat Seller</span>
+</button>
+</div>
+<button class="w-full mt-4 flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent text-primary gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-4 border-2 border-primary/50 hover:border-primary">
+<span class="material-symbols-outlined">request_quote</span>
+<span>Request Custom Quote</span>
+</button>
+<div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+<div class="flex flex-col items-center">
+<div class="flex items-center justify-center size-10 rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined">local_shipping</span>
+</div>
+<p class="text-sm font-semibold mt-2">Fast delivery</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="flex items-center justify-center size-10 rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined">verified_user</span>
+</div>
+<p class="text-sm font-semibold mt-2">Quality guaranteed</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="flex items-center justify-center size-10 rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined">lock</span>
+</div>
+<p class="text-sm font-semibold mt-2">Escrow-protected payment</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-2 mt-8">
+<div class="border-t border-gray-200 dark:border-gray-800 pt-8">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white">Product Description</h2>
+<div class="mt-4 space-y-4 text-gray-600 dark:text-gray-400">
+<p>Introducing our premium Organic Cotton T-Shirts, the perfect blend of style, comfort, and sustainability. Made from 100% GOTS-certified organic cotton, these t-shirts are exceptionally soft, breathable, and gentle on the skin. They are an ideal choice for retailers looking to offer high-quality, eco-friendly apparel to their customers.</p>
+<p>Available in a range of classic colors and sizes, our t-shirts feature a modern, unisex fit that suits all body types. The durable fabric and high-quality stitching ensure they maintain their shape and softness wash after wash, making them a long-lasting addition to any wardrobe.</p>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

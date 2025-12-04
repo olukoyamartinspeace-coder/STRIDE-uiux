@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TradeStride Landing Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#195de6",
+            "background-light": "#f6f6f8",
+            "background-dark": "#111621",
+          },
+          fontFamily: {
+            "display": ["Inter"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- TopNavBar Section -->
+<div class="px-4 sm:px-8 md:px-20 lg:px-40 flex flex-1 justify-center py-5 bg-background-light dark:bg-background-dark">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f4] dark:border-b-gray-700 px-10 py-3">
+<div class="flex items-center gap-4 text-gray-800 dark:text-white">
+<div class="size-4 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_543)">
+<path d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.3042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M7.24189 26.4066C7.31369 26.4411 7.64204 26.5637 8.52504 26.3738C9.59462 26.1438 11.0343 25.5311 12.7183 24.4963C14.7583 23.2426 17.0256 21.4503 19.238 19.238C21.4503 17.0256 23.2426 14.7583 24.4963 12.7183C25.5311 11.0343 26.1438 9.59463 26.3738 8.52504C26.5637 7.64204 26.4411 7.31369 26.4066 7.24189C26.345 7.21246 26.143 7.14535 25.6664 7.1918C24.9745 7.25925 23.9954 7.5498 22.7699 8.14278C20.3369 9.32007 17.3369 11.4915 14.4142 14.4142C11.4915 17.3369 9.32007 20.3369 8.14278 22.7699C7.5498 23.9954 7.25925 24.9745 7.1918 25.6664C7.14534 26.143 7.21246 26.345 7.24189 26.4066ZM29.9001 10.7285C29.4519 12.0322 28.7617 13.4172 27.9042 14.8126C26.465 17.1544 24.4686 19.6641 22.0664 22.0664C19.6641 24.4686 17.1544 26.465 14.8126 27.9042C13.4172 28.7617 12.0322 29.4519 10.7285 29.9001L21.5754 40.747C21.6001 40.7606 21.8995 40.931 22.8729 40.7217C23.9424 40.4916 25.3821 39.879 27.0661 38.8441C29.1062 37.5904 31.3734 35.7982 33.5858 33.5858C35.7982 31.3734 37.5904 29.1062 38.8441 27.0661C39.879 25.3821 40.4916 23.9425 40.7216 22.8729C40.931 21.8995 40.7606 21.6001 40.747 21.5754L29.9001 10.7285ZM29.2403 4.41187L43.5881 18.7597C44.9757 20.1473 44.9743 22.1235 44.6322 23.7139C44.2714 25.3919 43.4158 27.2666 42.252 29.1604C40.8128 31.5022 38.8165 34.012 36.4142 36.4142C34.012 38.8165 31.5022 40.8128 29.1604 42.252C27.2666 43.4158 25.3919 44.2714 23.7139 44.6322C22.1235 44.9743 20.1473 44.9757 18.7597 43.5881L4.41187 29.2403C3.29027 28.1187 3.08209 26.5973 3.21067 25.2783C3.34099 23.9415 3.8369 22.4852 4.54214 21.0277C5.96129 18.0948 8.43335 14.7382 11.5858 11.5858C14.7382 8.43335 18.0948 5.9613 21.0277 4.54214C22.4852 3.8369 23.9415 3.34099 25.2783 3.21067C26.5973 3.08209 28.1187 3.29028 29.2403 4.41187Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clippath id="clip0_6_543"><rect fill="white" height="48" width="48"></rect></clippath>
+</defs>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">TradeStride</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="hidden sm:flex items-center gap-9">
+<a class="text-sm font-medium leading-normal text-gray-800 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Features</a>
+<a class="text-sm font-medium leading-normal text-gray-800 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Pricing</a>
+<a class="text-sm font-medium leading-normal text-gray-800 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Blog</a>
+</div>
+<div class="flex gap-2">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90">
+<span class="truncate">Sign Up</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-sm font-bold leading-normal tracking-[0.015em] hover:bg-gray-300 dark:hover:bg-gray-600">
+<span class="truncate">Login</span>
+</button>
+</div>
+</div>
+</header>
+</div>
+</div>
+<!-- Hero Section -->
+<div class="px-4 sm:px-8 md:px-20 lg:px-40 flex flex-1 justify-center py-5 bg-background-light dark:bg-background-dark">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<div class="@container">
+<div class="flex flex-col gap-6 px-4 py-10 @[480px]:gap-8 @[864px]:flex-row-reverse">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg @[480px]:h-auto @[480px]:min-w-[400px] @[864px]:w-full" data-alt="Abstract image representing global trade and logistics" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD8hjBNMv2b3-eYzt8wcasfo_pcfETOvp6Qq7xESf34a0lQKNoZogZnCDs1FlyFagzcZ-Yhy5q9n3sWft8r-txmSEmtb7bb5A6q9YCMIUigeEaP-Af8G-Qnk3KJ7iFsn_UvJ330CwK2RYoGz12ozqdkQDvaSZdWY9cmqOLiufE_TwPYmfPGBhMh0vs8agq20d45zRAZIFi0cntfMYWSAnBSDQsMHmxMo7guwm4gYhq7f-u-JYWUC9st13nCRC9vDLXcM6Rh5qBDtaw");'></div>
+<div class="flex flex-col gap-6 @[480px]:min-w-[400px] @[480px]:gap-8 @[864px]:justify-center">
+<div class="flex flex-col gap-2 text-left">
+<h1 class="text-gray-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">Revolutionize Your Wholesale Business</h1>
+<h2 class="text-gray-700 dark:text-gray-300 text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">Connect with verified wholesalers and retailers for secure, efficient transactions. TradeStride is the future of B2B commerce.</h2>
+</div>
+<div class="flex-wrap gap-3 flex">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] hover:bg-primary/90">
+<span class="truncate">I'm a Retailer</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] hover:bg-gray-300 dark:hover:bg-gray-600">
+<span class="truncate">I'm a Wholesaler</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SectionHeader/Social Proof Section -->
+<div class="px-4 sm:px-8 md:px-20 lg:px-40 flex flex-1 justify-center py-5 bg-background-light dark:bg-background-dark">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<h4 class="text-[#636f88] dark:text-gray-400 text-sm font-bold leading-normal tracking-[0.015em] px-4 py-2 text-center">Trusted by leading brands and publications</h4>
+<div class="flex justify-center items-center gap-8 sm:gap-12 md:gap-16 py-4 opacity-60">
+<img alt="Brand A Logo" class="h-6 sm:h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAs5TA_ulPGUcVv7BP5VewSPscQLNLqNUmkhFb8ipMQnWPHSkwThM9VtHpMZRkwSTDJd9O9Ef9cOCFTZfQqQ2zNLx9J_bQVdhIatgFzuWByMcji-2gwAVMWAT2TESY1i72vRQuCM0YDNSFgN6ncPEPq690ZiCGefz0901lbuc8oTVlyhzevCq7scximyrdqjJC4EhjTOuVjHAuoyzriSULmDslmlEzacrfnty419TuS_mvjAEnLB-mzNPTtHECIFQkXjFuOOc7Xlo"/>
+<img alt="Brand B Logo" class="h-6 sm:h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwBnPNly-STcD9HJd5HMvYr4-USKZxZcY330wr9WW3-R8AfA-tggEcmb8hcRC5GjEmDEkSo9rjwAaPyQ4RRO7xg3_qN_y4mt5V0sURWZyOTN6GUPxQjp-_BESTqG76u67YyGuucq40MgVMVfDGDMJer185at-T-1C1sZmIecDcjQdM3r-Kpi8pZliZOlPsa2K19dhmXN4XBSi9Fs5SsSKMjT-5ACIhK3JmsKTcwAUKsLhX4bIAcaNZ_TmcPz-ATlcMXUNWQksJ_i4"/>
+<img alt="Brand C Logo" class="h-6 sm:h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ94vQ5cUe2EheRRZ4WNdMgbmgdi-AqJpHcM5J8sliKmV4AP5FL-K5QZDlWoU9dQvyZGtDCLB-TEGOvpea_9AXx06AkKLy7p8BEOQDkuKK0Su7yme-9sA6nlNx_rqVPeu57IV0e_Lq_ar2UQVe-5W9rnfTCZDT3iWbDPxIe9dwzYKp8khrl42WoLtQnmk8UImA0wpal3fGMvqYf0EhQI-4V3BcjAWVjs6vQJFmXfKAHbpRCVckxzM5DY___mJQZBxMo0Hv2NnMm9o"/>
+<img alt="Brand D Logo" class="hidden sm:block h-6 sm:h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbOhEzYJKVGhwl9qAeKYxG7-UjCHQD0ByLbCY1512iG_W36BXHOz_EZnIIVAOHr3_5LnccVYF9IBPR4ZqBzwtTFBZZY8K_cTdHe_3gw7H6hb7UXtSTQUGHN1aChrUGgnF4ccjEgczvUkSOlINY8kUDHo6fpcVe10sSDMQ91UFu6Iv03EBJMhDmB0DyLcQlfpFHHUyE_I7154-8oQhhqrFVGzuLVJfVVuXOOFRpeWDdHGaWeSayHY5R2eguwGd4wnzbpVOQL89f6lM"/>
+<img alt="Brand E Logo" class="hidden md:block h-6 sm:h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkrEvBHaTGQMuvXiLAPGuD1dxEupgAlDnUF0Mf8hVhZfSZFDR33kxZ7BVLAbvJ3ZfJxpvJYgBOoyMbADe3hCTx8nYCcFBPoegKqCePfc6KMNAKE--RaNN8L1FIq_ICFs3FWj3jp56SE9D_4n5g1oeYMFWPPkMHgcTM9VmSbI2MwWAOe7RTaIGG7FcrriwE0APgBfa0iXtl0CR1p_em9yVbYF24CwriDhwaqmsP5olYjY6TkrJUzHMJ3mVoY1IvIc7PKJQ0NUeoCEY"/>
+</div>
+</div>
+</div>
+<!-- Feature Section -->
+<div class="px-4 sm:px-8 md:px-20 lg:px-40 flex flex-1 justify-center py-5 bg-background-light dark:bg-background-dark">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<div class="flex flex-col gap-10 px-4 py-10 @container">
+<div class="flex flex-col gap-4">
+<h1 class="text-gray-900 dark:text-white tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]">Everything You Need for Smarter Wholesale Trading</h1>
+<p class="text-gray-700 dark:text-gray-300 text-base font-normal leading-normal max-w-[720px]">Our platform is designed to build trust and streamline your entire workflow, from discovery to delivery.</p>
+</div>
+<div class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4 p-0">
+<div class="flex flex-1 gap-3 rounded-lg border border-[#dcdfe5] dark:border-gray-700 bg-white dark:bg-background-dark p-4 flex-col">
+<div class="text-primary" data-icon="ShieldCheck" data-size="24px" data-weight="regular">
+<span class="material-symbols-outlined" style="font-size: 24px;">verified_user</span>
+</div>
+<div class="flex flex-col gap-1">
+<h2 class="text-gray-900 dark:text-white text-base font-bold leading-tight">Verified Sellers</h2>
+<p class="text-[#636f88] dark:text-gray-400 text-sm font-normal leading-normal">Access a curated network of trusted, vetted wholesalers to ensure quality and reliability for your business.</p>
+</div>
+</div>
+<div class="flex flex-1 gap-3 rounded-lg border border-[#dcdfe5] dark:border-gray-700 bg-white dark:bg-background-dark p-4 flex-col">
+<div class="text-primary" data-icon="Lock" data-size="24px" data-weight="regular">
+<span class="material-symbols-outlined" style="font-size: 24px;">lock</span>
+</div>
+<div class="flex flex-col gap-1">
+<h2 class="text-gray-900 dark:text-white text-base font-bold leading-tight">Secure Escrow Payments</h2>
+<p class="text-[#636f88] dark:text-gray-400 text-sm font-normal leading-normal">All transactions are protected with our secure escrow system, ensuring your funds are safe until the order is complete.</p>
+</div>
+</div>
+<div class="flex flex-1 gap-3 rounded-lg border border-[#dcdfe5] dark:border-gray-700 bg-white dark:bg-background-dark p-4 flex-col">
+<div class="text-primary" data-icon="Tag" data-size="24px" data-weight="regular">
+<span class="material-symbols-outlined" style="font-size: 24px;">sell</span>
+</div>
+<div class="flex flex-col gap-1">
+<h2 class="text-gray-900 dark:text-white text-base font-bold leading-tight">Bulk Pricing Options</h2>
+<p class="text-[#636f88] dark:text-gray-400 text-sm font-normal leading-normal">Unlock better margins with dynamic pricing and exclusive discounts on bulk orders.</p>
+</div>
+</div>
+<div class="flex flex-1 gap-3 rounded-lg border border-[#dcdfe5] dark:border-gray-700 bg-white dark:bg-background-dark p-4 flex-col">
+<div class="text-primary" data-icon="Chat" data-size="24px" data-weight="regular">
+<span class="material-symbols-outlined" style="font-size: 24px;">chat</span>
+</div>
+<div class="flex flex-col gap-1">
+<h2 class="text-gray-900 dark:text-white text-base font-bold leading-tight">Real-Time Negotiation</h2>
+<p class="text-[#636f88] dark:text-gray-400 text-sm font-normal leading-normal">Communicate and negotiate terms directly with sellers through our integrated real-time chat tools.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 'How it Works' Section -->
+<div class="px-4 sm:px-8 md:px-20 lg:px-40 flex flex-1 justify-center py-10 bg-white dark:bg-gray-900">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1 items-center gap-10">
+<div class="text-center">
+<h2 class="text-3xl font-bold text-gray-900 dark:text-white">How It Works</h2>
+<p class="mt-2 text-gray-600 dark:text-gray-400">A simple, streamlined process to get you trading.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8 w-full">
+<div class="flex flex-col items-center text-center">
+<div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary/20 text-primary mb-4">
+<span class="material-symbols-outlined" style="font-size: 32px;">search</span>
+</div>
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">1. Search &amp; Discover</h3>
+<p class="mt-1 text-gray-600 dark:text-gray-400">Find the right products and verified suppliers from our extensive catalog.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary/20 text-primary mb-4">
+<span class="material-symbols-outlined" style="font-size: 32px;">groups</span>
+</div>
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">2. Negotiate &amp; Agree</h3>
+<p class="mt-1 text-gray-600 dark:text-gray-400">Use our built-in tools to negotiate prices, terms, and quantities in real-time.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary/20 text-primary mb-4">
+<span class="material-symbols-outlined" style="font-size: 32px;">paid</span>
+</div>
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">3. Transact Securely</h3>
+<p class="mt-1 text-gray-600 dark:text-gray-400">Pay with confidence through our secure escrow system and track your delivery.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="px-4 sm:px-8 md:px-20 lg:px-40 bg-gray-800 dark:bg-background-dark text-gray-300">
+<div class="max-w-[960px] mx-auto py-12 px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="space-y-4">
+<h3 class="text-sm font-semibold text-gray-200 tracking-wider uppercase">Company</h3>
+<ul class="space-y-2">
+<li><a class="text-base text-gray-400 hover:text-white" href="#">About</a></li>
+<li><a class="text-base text-gray-400 hover:text-white" href="#">Careers</a></li>
+<li><a class="text-base text-gray-400 hover:text-white" href="#">Blog</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h3 class="text-sm font-semibold text-gray-200 tracking-wider uppercase">Support</h3>
+<ul class="space-y-2">
+<li><a class="text-base text-gray-400 hover:text-white" href="#">Help Center</a></li>
+<li><a class="text-base text-gray-400 hover:text-white" href="#">Contact Us</a></li>
+<li><a class="text-base text-gray-400 hover:text-white" href="#">Status</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h3 class="text-sm font-semibold text-gray-200 tracking-wider uppercase">Legal</h3>
+<ul class="space-y-2">
+<li><a class="text-base text-gray-400 hover:text-white" href="#">Privacy Policy</a></li>
+<li><a class="text-base text-gray-400 hover:text-white" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h3 class="text-sm font-semibold text-gray-200 tracking-wider uppercase">Connect</h3>
+<ul class="space-y-2">
+<li><a class="text-base text-gray-400 hover:text-white" href="#">Twitter</a></li>
+<li><a class="text-base text-gray-400 hover:text-white" href="#">LinkedIn</a></li>
+<li><a class="text-base text-gray-400 hover:text-white" href="#">Facebook</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-12 border-t border-gray-700 pt-8 flex flex-col sm:flex-row items-center justify-between">
+<p class="text-base text-gray-400">© 2024 TradeStride, Inc. All rights reserved.</p>
+<div class="flex items-center gap-4 text-gray-400 mt-4 sm:mt-0">
+<div class="size-4 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_543_footer)">
+<path d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.3042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M7.24189 26.4066C7.31369 26.4411 7.64204 26.5637 8.52504 26.3738C9.59462 26.1438 11.0343 25.5311 12.7183 24.4963C14.7583 23.2426 17.0256 21.4503 19.238 19.238C21.4503 17.0256 23.2426 14.7583 24.4963 12.7183C25.5311 11.0343 26.1438 9.59463 26.3738 8.52504C26.5637 7.64204 26.4411 7.31369 26.4066 7.24189C26.345 7.21246 26.143 7.14535 25.6664 7.1918C24.9745 7.25925 23.9954 7.5498 22.7699 8.14278C20.3369 9.32007 17.3369 11.4915 14.4142 14.4142C11.4915 17.3369 9.32007 20.3369 8.14278 22.7699C7.5498 23.9954 7.25925 24.9745 7.1918 25.6664C7.14534 26.143 7.21246 26.345 7.24189 26.4066ZM29.9001 10.7285C29.4519 12.0322 28.7617 13.4172 27.9042 14.8126C26.465 17.1544 24.4686 19.6641 22.0664 22.0664C19.6641 24.4686 17.1544 26.465 14.8126 27.9042C13.4172 28.7617 12.0322 29.4519 10.7285 29.9001L21.5754 40.747C21.6001 40.7606 21.8995 40.931 22.8729 40.7217C23.9424 40.4916 25.3821 39.879 27.0661 38.8441C29.1062 37.5904 31.3734 35.7982 33.5858 33.5858C35.7982 31.3734 37.5904 29.1062 38.8441 27.0661C39.879 25.3821 40.4916 23.9425 40.7216 22.8729C40.931 21.8995 40.7606 21.6001 40.747 21.5754L29.9001 10.7285ZM29.2403 4.41187L43.5881 18.7597C44.9757 20.1473 44.9743 22.1235 44.6322 23.7139C44.2714 25.3919 43.4158 27.2666 42.252 29.1604C40.8128 31.5022 38.8165 34.012 36.4142 36.4142C34.012 38.8165 31.5022 40.8128 29.1604 42.252C27.2666 43.4158 25.3919 44.2714 23.7139 44.6322C22.1235 44.9743 20.1473 44.9757 18.7597 43.5881L4.41187 29.2403C3.29027 28.1187 3.08209 26.5973 3.21067 25.2783C3.34099 23.9415 3.8369 22.4852 4.54214 21.0277C5.96129 18.0948 8.43335 14.7382 11.5858 11.5858C14.7382 8.43335 18.0948 5.9613 21.0277 4.54214C22.4852 3.8369 23.9415 3.34099 25.2783 3.21067C26.5973 3.08209 28.1187 3.29028 29.2403 4.41187Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clippath id="clip0_6_543_footer"><rect fill="white" height="48" width="48"></rect></clippath>
+</defs>
+</svg>
+</div>
+<h2 class="text-sm font-bold leading-tight tracking-[-0.015em] text-white">TradeStride</h2>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

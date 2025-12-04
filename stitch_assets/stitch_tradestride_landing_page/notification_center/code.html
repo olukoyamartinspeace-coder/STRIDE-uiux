@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Notification Center</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#195de6",
+              "background-light": "#f6f6f8",
+              "background-dark": "#111621",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-display">
+<div class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark px-10 py-3 sticky top-0 z-10">
+<div class="flex items-center gap-4 text-slate-900 dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Wholesale Direct</h2>
+</div>
+<div class="flex flex-1 justify-end items-center gap-8">
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-slate-900 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="#">Dashboard</a>
+<a class="text-slate-900 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="#">Products</a>
+<a class="text-slate-900 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="#">Orders</a>
+<a class="text-slate-900 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="#">Messages</a>
+</nav>
+<div class="flex items-center gap-2">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+<span class="material-symbols-outlined text-xl">help</span>
+</button>
+<button class="relative flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+<span class="material-symbols-outlined text-xl">notifications</span>
+<div class="absolute top-1.5 right-1.5 size-2.5 bg-primary rounded-full border-2 border-white dark:border-background-dark"></div>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCQoumn87--uWrknmQDT1JP_k9oKWMN83Zyh-6ps7oVKJIRN3SMiuW_BjnENPpRr8ZyBHFvziCSyknr_UbjVrxI9ZL_PT7bpyw08dfRddfGC3BsKAgMIc0T_4SmniGA2oyB3d-pPojoVrihJ_fhVMokGtcpGrTWmP3AC2lOqFYnY3w47FfE-x4Xo9aYCrSpZrWzWduhlA00RxhVYNC-aa-5Bad_wr0jjBqaptnz8QSHjQSLpm0-bCsSSYj8BUWBh6IY78wdVvjfPZc");'></div>
+</div>
+</div>
+</header>
+<main class="px-4 sm:px-10 lg:px-20 xl:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col w-full max-w-[960px] flex-1">
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between gap-4 p-4 items-center">
+<div class="flex min-w-72 flex-col gap-2">
+<p class="text-slate-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">Notifications</p>
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal leading-normal">View and manage all your recent activity.</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Mark all as read</span>
+</button>
+</div>
+<!-- Chips -->
+<div class="flex gap-3 p-3 overflow-x-auto border-b border-slate-200 dark:border-slate-800">
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary/20 dark:bg-primary/30 px-4">
+<p class="text-primary text-sm font-medium leading-normal">All</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 px-4">
+<p class="text-slate-900 dark:text-slate-300 text-sm font-medium leading-normal">Unread</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 px-4">
+<p class="text-slate-900 dark:text-slate-300 text-sm font-medium leading-normal">Messages</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 px-4">
+<p class="text-slate-900 dark:text-slate-300 text-sm font-medium leading-normal">Offers</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 px-4">
+<p class="text-slate-900 dark:text-slate-300 text-sm font-medium leading-normal">Orders</p>
+</button>
+</div>
+<div class="flex flex-col divide-y divide-slate-200 dark:divide-slate-800">
+<!-- Notification List -->
+<!-- List Item: New Message -->
+<div class="flex gap-4 bg-white dark:bg-background-dark hover:bg-slate-50 dark:hover:bg-slate-900/50 px-4 py-4 justify-between items-center transition-colors duration-150">
+<div class="flex items-start gap-4 flex-1">
+<div class="text-slate-900 dark:text-slate-300 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 shrink-0 size-12">
+<span class="material-symbols-outlined">chat_bubble</span>
+</div>
+<div class="flex flex-1 flex-col justify-center gap-0.5">
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal">New message from 'Textile Co.'</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">Regarding your inquiry for 'Organic Cotton Fabric'.</p>
+<p class="text-slate-400 dark:text-slate-500 text-sm font-normal leading-normal">2 hours ago</p>
+</div>
+</div>
+<div class="shrink-0 flex items-center gap-4">
+<a class="text-sm font-medium leading-normal text-primary hover:underline" href="#">Reply to Message</a>
+<div class="size-2.5 bg-primary rounded-full"></div>
+</div>
+</div>
+<!-- List Item: Offer Received -->
+<div class="flex gap-4 bg-white dark:bg-background-dark hover:bg-slate-50 dark:hover:bg-slate-900/50 px-4 py-4 justify-between items-center transition-colors duration-150">
+<div class="flex items-start gap-4 flex-1">
+<div class="text-slate-900 dark:text-slate-300 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 shrink-0 size-12">
+<span class="material-symbols-outlined">sell</span>
+</div>
+<div class="flex flex-1 flex-col justify-center gap-0.5">
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal">You received a new offer from 'Global Imports'</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">A new offer was placed for 'Grade A Coffee Beans'.</p>
+<p class="text-slate-400 dark:text-slate-500 text-sm font-normal leading-normal">Yesterday</p>
+</div>
+</div>
+<div class="shrink-0 flex items-center gap-4">
+<a class="text-sm font-medium leading-normal text-primary hover:underline" href="#">View Offer</a>
+<div class="size-2.5 bg-primary rounded-full"></div>
+</div>
+</div>
+<!-- List Item: Order Update -->
+<div class="flex gap-4 bg-white dark:bg-background-dark hover:bg-slate-50 dark:hover:bg-slate-900/50 px-4 py-4 justify-between items-center transition-colors duration-150">
+<div class="flex items-start gap-4 flex-1">
+<div class="text-slate-900 dark:text-slate-300 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 shrink-0 size-12">
+<span class="material-symbols-outlined">local_shipping</span>
+</div>
+<div class="flex flex-1 flex-col justify-center gap-0.5">
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal">Order #WD-84352 has been shipped</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">Your order of 'Industrial Grade Adhesives' is on its way.</p>
+<p class="text-slate-400 dark:text-slate-500 text-sm font-normal leading-normal">3 days ago</p>
+</div>
+</div>
+<div class="shrink-0">
+<a class="text-sm font-medium leading-normal text-primary hover:underline" href="#">Track Order</a>
+</div>
+</div>
+<!-- List Item: Offer Accepted -->
+<div class="flex gap-4 bg-white dark:bg-background-dark hover:bg-slate-50 dark:hover:bg-slate-900/50 px-4 py-4 justify-between items-center transition-colors duration-150">
+<div class="flex items-start gap-4 flex-1">
+<div class="text-slate-900 dark:text-slate-300 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 shrink-0 size-12">
+<span class="material-symbols-outlined">thumb_up</span>
+</div>
+<div class="flex flex-1 flex-col justify-center gap-0.5">
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal">Your offer has been accepted</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">'Craft Supplies Inc.' accepted your offer for 'Bulk Glitter'.</p>
+<p class="text-slate-400 dark:text-slate-500 text-sm font-normal leading-normal">5 days ago</p>
+</div>
+</div>
+<div class="shrink-0">
+<a class="text-sm font-medium leading-normal text-primary hover:underline" href="#">View Order</a>
+</div>
+</div>
+<!-- List Item: Escrow Released -->
+<div class="flex gap-4 bg-white dark:bg-background-dark hover:bg-slate-50 dark:hover:bg-slate-900/50 px-4 py-4 justify-between items-center transition-colors duration-150">
+<div class="flex items-start gap-4 flex-1">
+<div class="text-slate-900 dark:text-slate-300 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 shrink-0 size-12">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<div class="flex flex-1 flex-col justify-center gap-0.5">
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal">Funds released for Order #WD-84299</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">Escrow payment has been released to 'Paper Goods Co.'.</p>
+<p class="text-slate-400 dark:text-slate-500 text-sm font-normal leading-normal">1 week ago</p>
+</div>
+</div>
+<div class="shrink-0">
+<a class="text-sm font-medium leading-normal text-primary hover:underline" href="#">View Transaction</a>
+</div>
+</div>
+<!-- Empty State (Uncomment to view) -->
+<!--
+            <div class="flex flex-col items-center justify-center gap-4 text-center p-16 border-t border-slate-200 dark:border-slate-800">
+                <div class="flex items-center justify-center size-16 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400">
+                    <span class="material-symbols-outlined text-4xl">notifications_off</span>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <p class="text-slate-900 dark:text-white text-lg font-semibold">You have no notifications</p>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm">Check back later for updates on your orders and messages.</p>
+                </div>
+            </div>
+            -->
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

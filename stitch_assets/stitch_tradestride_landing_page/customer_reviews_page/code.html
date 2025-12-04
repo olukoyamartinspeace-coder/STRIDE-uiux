@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Customer Reviews Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#195de6",
+              "background-light": "#f6f6f8",
+              "background-dark": "#111621",
+            },
+            fontFamily: {
+              "display": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-gray-200 dark:border-b-gray-800 px-4 md:px-10 py-3 bg-white dark:bg-background-dark">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-gray-900 dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L1 9l4 2.5V18h3v-6h4v6h3v-6.5L23 9 12 2zm0 8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"></path></svg>
+</div>
+<h2 class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">WholesaleConnect</h2>
+</div>
+<label class="hidden md:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-gray-500 dark:text-gray-400 flex border-none bg-gray-100 dark:bg-gray-800 items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined text-base">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-900 dark:text-white focus:outline-0 focus:ring-0 border-none bg-gray-100 dark:bg-gray-800 focus:border-none h-full placeholder:text-gray-500 dark:placeholder:text-gray-400 px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Search" value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-1 justify-end gap-2 md:gap-4">
+<nav class="hidden lg:flex items-center gap-6">
+<a class="text-gray-800 dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary" href="#">Dashboard</a>
+<a class="text-gray-800 dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary" href="#">Products</a>
+<a class="text-gray-800 dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary" href="#">Orders</a>
+<a class="text-gray-800 dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary" href="#">Customers</a>
+<a class="text-primary text-sm font-bold leading-normal" href="#">Reviews</a>
+</nav>
+<div class="flex gap-2 ml-4">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0">
+<span class="material-symbols-outlined text-xl">notifications</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0">
+<span class="material-symbols-outlined text-xl">help</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAe3qW1Pj2c76L7u3yoMHiTMkvqntDFI-_EpbtWGej-w6hgmeg90obdz_eRsnHp2wDaS_8eulI4WiKwL8FQ-u_zhVkuNNaJI3prrSO50SwRre1Dx0B9wTDk3gm0pCQTU_LZIYOfStmC1usPnrkojxAMIZMbOuRjNz6B4hui_W-Ji0BS92x8vVK2SS5Ik7f7a56-dOFYBLmFfMwvBSVY9_WsxtXyJ9fbf_Ysj9l5tnSp1qO8DG0IvmAC3MDHYZOXZIam58o4YhhhvNc");'></div>
+</div>
+</div>
+</header>
+<main class="px-4 md:px-10 lg:px-20 xl:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col w-full max-w-[960px] flex-1">
+<div class="flex flex-wrap justify-between gap-4 py-4">
+<div class="flex min-w-72 flex-col gap-2">
+<p class="text-gray-900 dark:text-white text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em]">Customer Reviews</p>
+<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal">See what verified retailers are saying about your products and service.</p>
+</div>
+</div>
+<!-- Populated State: Uncomment this section and comment/remove the empty state section when reviews exist -->
+<div class="flex flex-col gap-8">
+<div class="flex flex-wrap gap-x-8 gap-y-6 p-4 rounded-lg bg-white dark:bg-gray-800/50 border border-gray-200 dark:border-gray-800">
+<div class="flex flex-col gap-2">
+<p class="text-gray-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">4.8</p>
+<div class="flex gap-0.5">
+<span class="material-symbols-outlined fill text-yellow-400" style="font-size: 18px;">star</span>
+<span class="material-symbols-outlined fill text-yellow-400" style="font-size: 18px;">star</span>
+<span class="material-symbols-outlined fill text-yellow-400" style="font-size: 18px;">star</span>
+<span class="material-symbols-outlined fill text-yellow-400" style="font-size: 18px;">star</span>
+<span class="material-symbols-outlined fill text-yellow-400" style="font-size: 18px;">star_half</span>
+</div>
+<p class="text-gray-800 dark:text-gray-200 text-base font-normal leading-normal">125 reviews</p>
+</div>
+<div class="grid min-w-[200px] max-w-[400px] flex-1 grid-cols-[20px_1fr_40px] items-center gap-y-3">
+<p class="text-gray-800 dark:text-gray-200 text-sm font-normal leading-normal">5</p>
+<div class="flex h-2 flex-1 overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700"><div class="rounded-full bg-primary" style="width: 70%;"></div></div>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal text-right">70%</p>
+<p class="text-gray-800 dark:text-gray-200 text-sm font-normal leading-normal">4</p>
+<div class="flex h-2 flex-1 overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700"><div class="rounded-full bg-primary" style="width: 20%;"></div></div>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal text-right">20%</p>
+<p class="text-gray-800 dark:text-gray-200 text-sm font-normal leading-normal">3</p>
+<div class="flex h-2 flex-1 overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700"><div class="rounded-full bg-primary" style="width: 5%;"></div></div>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal text-right">5%</p>
+<p class="text-gray-800 dark:text-gray-200 text-sm font-normal leading-normal">2</p>
+<div class="flex h-2 flex-1 overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700"><div class="rounded-full bg-primary" style="width: 3%;"></div></div>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal text-right">3%</p>
+<p class="text-gray-800 dark:text-gray-200 text-sm font-normal leading-normal">1</p>
+<div class="flex h-2 flex-1 overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700"><div class="rounded-full bg-primary" style="width: 2%;"></div></div>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal text-right">2%</p>
+</div>
+</div>
+<div class="flex flex-col gap-8 overflow-x-hidden p-4">
+<div class="flex flex-col gap-4 bg-white dark:bg-gray-800/50 p-6 rounded-lg border border-gray-200 dark:border-gray-800">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Urban Apparel Co. company logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBgiFHTMoN-AMeuTvbfMxpXu0vqTPljy_ykrrAmD2AWo-0wAL3m0gZ7SzC5PQqhG1DGnP5cLOpS08LUheLEO_mdhfiF1mtPHflG21qB06iLSBNQbSnJVx4g0Jccp1KxeCzwiT4wxdTqoWYx40uvYmuGv-eIWhs8wSN2fHWPy9HadIwTfOpD2D122E26aSI5Ok2jRFHRHhwTiLozBVsiLseScZA-1Yo-uOQv5xv3zzddvd3nh2NS-mi554aFU5VexhsdUE6c0JsKpC4");'></div>
+<div class="flex-1">
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal">Urban Apparel Co.</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">2 weeks ago</p>
+</div>
+<div class="flex gap-0.5">
+<span class="material-symbols-outlined fill text-yellow-400" style="font-size: 20px;">star</span>
+<span class="material-symbols-outlined fill text-yellow-400" style="font-size: 20px;">star</span>
+<span class="material-symbols-outlined fill text-yellow-400" style="font-size: 20px;">star</span>
+<span class="material-symbols-outlined fill text-yellow-400" style="font-size: 20px;">star</span>
+<span class="material-symbols-outlined fill text-yellow-400" style="font-size: 20px;">star</span>
+</div>
+</div>
+<p class="text-gray-800 dark:text-gray-300 text-base font-normal leading-relaxed">The quality of the products is consistently outstanding, and the shipping is incredibly fast. Our customers love the new line, and we've seen a significant increase in sales since we started stocking these items. Highly recommend!</p>
+</div>
+<div class="flex flex-col gap-4 bg-white dark:bg-gray-800/50 p-6 rounded-lg border border-gray-200 dark:border-gray-800">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Gourmet Goods Inc. company logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDvpTp52KnvxlmKBenCYpBfIpbjP6zXb7VFk7R3vmW_r-ou75dP6P-JdYWnVefiRLKkjBJ33B6RiLPJtQEvV4I-F3E9icX0w8xKYUL3nzmIwOlHipvNki5TTJnHOX-s59NrVXBPGj9yA6qywFSjGp1O6zqvCI7iXW4gNc7J4cYQH8OMY-asAUHO8hWfMiEjgBPbHRWOXe4ndnVMYLxcbgnbr3QnsOBK1D66qz24eavPNfKw59NjkglwCtJx72SLFxVAVaSZWhxVlis");'></div>
+<div class="flex-1">
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal">Gourmet Goods Inc.</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">1 month ago</p>
+</div>
+<div class="flex gap-0.5">
+<span class="material-symbols-outlined fill text-yellow-400" style="font-size: 20px;">star</span>
+<span class="material-symbols-outlined fill text-yellow-400" style="font-size: 20px;">star</span>
+<span class="material-symbols-outlined fill text-yellow-400" style="font-size: 20px;">star</span>
+<span class="material-symbols-outlined fill text-yellow-400" style="font-size: 20px;">star</span>
+<span class="material-symbols-outlined text-gray-400" style="font-size: 20px;">star</span>
+</div>
+</div>
+<p class="text-gray-800 dark:text-gray-300 text-base font-normal leading-relaxed">A reliable partner for our business. The ordering process is straightforward, and the customer service team is always responsive and helpful. There was a minor issue with one shipment, but it was resolved immediately.</p>
+</div>
+<div class="flex flex-col gap-4 bg-white dark:bg-gray-800/50 p-6 rounded-lg border border-gray-200 dark:border-gray-800">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Home Essentials company logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA0APoLGPTdCVIL546UIG7gqCox-Xbm5n9mz1A5qrvYF-S3h3jPIUCzASiyudujXTT7iRDnkZ4hNNGulG-5hEYlN3Le5q8N5x8A4F41l_14mBdUKLyJmxsA7SgmrwD3xAkWgb8Mp-9dZhG3DSyrbVY1p42V03nQXdZMLGn0QNOaIjEINbUjz3OAW2s1bkr5QlIBPrSme82hIB1shFXVylGMxKMrmtQfRPQrAwC0r53rasFGqk8PkQ4tI678XeiuJ7WruJIppRtMatE");'></div>
+<div class="flex-1">
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal">Home Essentials</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">3 months ago</p>
+</div>
+<div class="flex gap-0.5">
+<span class="material-symbols-outlined fill text-yellow-400" style="font-size: 20px;">star</span>
+<span class="material-symbols-outlined fill text-yellow-400" style="font-size: 20px;">star</span>
+<span class="material-symbols-outlined fill text-yellow-400" style="font-size: 20px;">star</span>
+<span class="material-symbols-outlined fill text-yellow-400" style="font-size: 20px;">star</span>
+<span class="material-symbols-outlined fill text-yellow-400" style="font-size: 20px;">star</span>
+</div>
+</div>
+<p class="text-gray-800 dark:text-gray-300 text-base font-normal leading-relaxed">Five stars all the way. The product selection is excellent, and the wholesale pricing allows for great margins. We appreciate the attention to detail and the professional partnership. Will be a long-term customer.</p>
+</div>
+</div>
+<div class="flex items-center justify-center p-4">
+<a class="flex size-10 items-center justify-center rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700" href="#">
+<span class="material-symbols-outlined text-gray-800 dark:text-gray-200" style="font-size: 18px;">chevron_left</span>
+</a>
+<a class="text-sm font-bold leading-normal tracking-[0.015em] flex size-10 items-center justify-center text-white dark:text-gray-900 rounded-full bg-primary dark:bg-primary" href="#">1</a>
+<a class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-gray-800 dark:text-gray-200 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700" href="#">2</a>
+<a class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-gray-800 dark:text-gray-200 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700" href="#">3</a>
+<span class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-gray-800 dark:text-gray-200 rounded-full">...</span>
+<a class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-gray-800 dark:text-gray-200 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700" href="#">8</a>
+<a class="flex size-10 items-center justify-center rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700" href="#">
+<span class="material-symbols-outlined text-gray-800 dark:text-gray-200" style="font-size: 18px;">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Empty State: Comment this section out and uncomment the populated state when reviews exist -->
+<!--
+                    <div class="flex flex-1 items-center justify-center py-16">
+                      <div class="flex flex-col items-center gap-4 text-center p-8 bg-white dark:bg-gray-800/50 rounded-lg border border-gray-200 dark:border-gray-800">
+                        <div class="flex h-16 w-16 items-center justify-center rounded-full bg-primary/20 text-primary">
+                          <span class="material-symbols-outlined text-4xl">reviews</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">No reviews yet</h3>
+                        <p class="max-w-xs text-gray-500 dark:text-gray-400">Deliver great service to build trust and encourage your retailers to leave feedback.</p>
+                      </div>
+                    </div>
+                    -->
+</div>
+</main>
+</div>
+</div>
+</body></html>

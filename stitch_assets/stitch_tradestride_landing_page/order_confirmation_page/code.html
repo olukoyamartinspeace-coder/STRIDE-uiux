@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Order Confirmation Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#195de6",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-gray-200 dark:border-b-gray-800 px-4 sm:px-10 py-3 bg-white dark:bg-background-dark">
+<div class="flex items-center gap-4 text-gray-900 dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Wholesale Direct</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-sm font-medium leading-normal text-gray-900 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Dashboard</a>
+<a class="text-sm font-medium leading-normal text-gray-900 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">My Orders</a>
+<a class="text-sm font-medium leading-normal text-gray-900 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Continue Shopping</a>
+</div>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-300 gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+<span class="material-symbols-outlined text-xl">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC516TSxj8md4C69xykvECVgLxjcVl_miPkt51tku-6wkmP0eR6RSl4ulx_hsqvl6fOUu-vSHhsDftqQR5SqBXRUfU6G2GjwOGoaWlbCDLi8gIoOUgyoUGVw6Zx98MYxjMZ0Sm4hMdsb02nKfgIe_q_-nUEvRX-hjO-rKNnRtY3wIEOloviFNcRJu4hmVY4plXtKhQjGUXIEKwYg8dgejohyFsBDjx1jQ6AN_CnymfMO0wa1AReCSioYBDPP-HgHYTXTk5wwRnVRLM");'></div>
+</div>
+<button class="flex md:hidden max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-300 gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+<span class="material-symbols-outlined text-xl">menu</span>
+</button>
+</header>
+<main class="flex flex-1 justify-center py-10 sm:py-20 px-4">
+<div class="layout-content-container flex flex-col w-full max-w-2xl flex-1">
+<div class="flex flex-col items-center justify-center text-center p-6 sm:p-10 rounded-xl bg-white dark:bg-background-dark shadow-sm border border-gray-200 dark:border-gray-800">
+<div class="flex flex-col items-center gap-6 w-full">
+<h1 class="text-gray-900 dark:text-white tracking-tight text-3xl sm:text-4xl font-bold leading-tight">🎉 Order Confirmed!</h1>
+<p class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal max-w-md">
+                                Your payment is securely held in escrow. A confirmation email with your order details has been sent.
+                            </p>
+<div class="w-full border-t border-gray-200 dark:border-gray-800 my-2"></div>
+<div class="p-4 w-full text-left">
+<div class="flex justify-between gap-x-6 py-2">
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Order Number:</p>
+<p class="text-gray-900 dark:text-white text-sm font-medium leading-normal text-right">#B2B-12345</p>
+</div>
+<div class="flex justify-between gap-x-6 py-2">
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Placed On:</p>
+<p class="text-gray-900 dark:text-white text-sm font-medium leading-normal text-right">October 26, 2023</p>
+</div>
+<div class="flex justify-between gap-x-6 py-2">
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Sold By:</p>
+<p class="text-gray-900 dark:text-white text-sm font-medium leading-normal text-right">Global Supplies Inc.</p>
+</div>
+<div class="flex justify-between gap-x-6 py-2">
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Order Total:</p>
+<p class="text-gray-900 dark:text-white text-sm font-bold leading-normal text-right">$1,845.50</p>
+</div>
+</div>
+<div class="w-full border-t border-gray-200 dark:border-gray-800 my-2"></div>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full pt-4">
+<button class="flex w-full sm:w-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Track Order</span>
+</button>
+<button class="flex w-full sm:w-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200 text-base font-bold leading-normal tracking-[0.015em] hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<span class="truncate">Go to My Orders</span>
+</button>
+</div>
+</div>
+</div>
+<footer class="w-full py-8 mt-8 text-center">
+<p class="text-sm text-gray-500 dark:text-gray-400">© 2023 Wholesale Direct. All Rights Reserved.</p>
+</footer>
+</div>
+</main>
+</div>
+</div>
+</body></html>
