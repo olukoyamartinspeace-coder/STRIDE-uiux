@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Seller Inventory Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#195de6",
+              "background-light": "#f6f6f8",
+              "background-dark": "#111621",
+            },
+            fontFamily: {
+              "display": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex h-screen">
+<!-- SideNavBar -->
+<aside class="w-64 flex-shrink-0 bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800">
+<div class="flex h-full min-h-[700px] flex-col justify-between p-4">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 px-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Company logo for The Wholesale Co." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGZcxd0xDleviTACOlLQ8sazFJ_xGg5oH4XFKAxKW0Y4VTQ5SNKlnJAuBGvd-UofvFmpjYYWYgQsb7YTNzELOrWDcazTpxeFnyeST2wIB5J33Cd0UL83KINmlknJd2qaz7cg6-qtHHai39bUfJVxjh8pQ9MjuUJHEFUx20oZmxAeonV1zqAHXOJCEPcaW1_mH70zk_jRT5MGdODpSyjH79Js66o3KJjiN_W49GRB9malmEW0tlsaeKFiizyahUnSPBzix98B7bcMk");'></div>
+<div class="flex flex-col">
+<h1 class="text-[#111318] dark:text-white text-base font-medium leading-normal">The Wholesale Co.</h1>
+<p class="text-[#636f88] dark:text-gray-400 text-sm font-normal leading-normal">Seller Account</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 mt-4">
+<a class="flex items-center gap-3 px-3 py-2 text-[#636f88] dark:text-gray-400 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-sm font-medium leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary dark:bg-primary/30" href="#">
+<span class="material-symbols-outlined fill-1">inventory_2</span>
+<p class="text-sm font-medium leading-normal">Inventory</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#636f88] dark:text-gray-400 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">list_alt</span>
+<p class="text-sm font-medium leading-normal">Orders</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#636f88] dark:text-gray-400 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-sm font-medium leading-normal">Settings</p>
+</a>
+</nav>
+</div>
+<div class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 text-[#636f88] dark:text-gray-400 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">help</span>
+<p class="text-sm font-medium leading-normal">Help</p>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto">
+<div class="p-8">
+<!-- PageHeading -->
+<header class="flex flex-wrap justify-between items-center gap-4 mb-6">
+<h1 class="text-[#111318] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] min-w-72">Your Inventory</h1>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Add New Product</span>
+</button>
+</header>
+<!-- Toolbar & Search -->
+<div class="bg-white dark:bg-gray-900 p-4 rounded-xl border border-gray-200 dark:border-gray-800">
+<div class="flex flex-col md:flex-row gap-4">
+<!-- SearchBar -->
+<div class="flex-grow">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-[#636f88] dark:text-gray-400 flex bg-background-light dark:bg-background-dark items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111318] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border-none bg-background-light dark:bg-background-dark h-full placeholder:text-[#636f88] dark:placeholder:text-gray-500 px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Search by product name" value=""/>
+</div>
+</label>
+</div>
+<!-- Chips / Filters -->
+<div class="flex gap-3 overflow-x-auto">
+<button class="flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-background-light dark:bg-background-dark pl-4 pr-3 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<p class="text-[#111318] dark:text-white text-sm font-medium leading-normal">Status</p>
+<span class="material-symbols-outlined text-[#636f88] dark:text-gray-400">expand_more</span>
+</button>
+<button class="flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-background-light dark:bg-background-dark pl-4 pr-3 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<p class="text-[#111318] dark:text-white text-sm font-medium leading-normal">Category</p>
+<span class="material-symbols-outlined text-[#636f88] dark:text-gray-400">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Data Table -->
+<div class="mt-4 overflow-x-auto">
+<table class="w-full text-left">
+<thead class="border-b border-gray-200 dark:border-gray-800">
+<tr>
+<th class="p-4 text-sm font-semibold text-[#636f88] dark:text-gray-400 uppercase tracking-wider">
+<input class="form-checkbox h-4 w-4 text-primary bg-background-light dark:bg-background-dark border-gray-300 dark:border-gray-600 rounded focus:ring-primary/50" type="checkbox"/>
+</th>
+<th class="p-4 text-sm font-semibold text-[#636f88] dark:text-gray-400 uppercase tracking-wider">Product</th>
+<th class="p-4 text-sm font-semibold text-[#636f88] dark:text-gray-400 uppercase tracking-wider text-right">Stock</th>
+<th class="p-4 text-sm font-semibold text-[#636f88] dark:text-gray-400 uppercase tracking-wider text-right">Min Order</th>
+<th class="p-4 text-sm font-semibold text-[#636f88] dark:text-gray-400 uppercase tracking-wider">Status</th>
+<th class="p-4 text-sm font-semibold text-[#636f88] dark:text-gray-400 uppercase tracking-wider text-center">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-200 dark:divide-gray-800">
+<!-- Table Row 1 -->
+<tr class="hover:bg-background-light dark:hover:bg-background-dark/50 transition-colors">
+<td class="p-4"><input class="form-checkbox h-4 w-4 text-primary bg-background-light dark:bg-background-dark border-gray-300 dark:border-gray-600 rounded focus:ring-primary/50" type="checkbox"/></td>
+<td class="p-4">
+<div class="flex items-center gap-4">
+<img class="h-12 w-12 object-cover rounded-lg" data-alt="Red sports shoe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqCIF8sLc-AujbJd6RcY7B28noNk0FdVbVfKQK8tgBSnMox9wP7kuDSZ4qf-26ZzWCcZE_eYG0nn5-Lhljx2WRoimUDgBp4QkfMtNaAP_JOZj6fPJGNy5-hFDUddU2h3AGSJvhpmiP-3ow9DApU09S6mSx5nJDPM86nijUMtVXlBdsQKtUhDeDpPZ8CHe-tmhboI_dWienijGbiQvV8yqGWsT1ZGSnNnTRIptME2c9XZCcQB2b9tO9jfqpXPxB4yHQC-2YKpj6Tyc"/>
+<span class="font-medium text-[#111318] dark:text-white">Premium Running Shoes</span>
+</div>
+</td>
+<td class="p-4 text-right">1,200</td>
+<td class="p-4 text-right">24</td>
+<td class="p-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-300">
+                                            Active
+                                        </span>
+</td>
+<td class="p-4 text-center">
+<button class="p-2 text-[#636f88] dark:text-gray-400 hover:text-primary dark:hover:text-primary rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Table Row 2 -->
+<tr class="hover:bg-background-light dark:hover:bg-background-dark/50 transition-colors">
+<td class="p-4"><input class="form-checkbox h-4 w-4 text-primary bg-background-light dark:bg-background-dark border-gray-300 dark:border-gray-600 rounded focus:ring-primary/50" type="checkbox"/></td>
+<td class="p-4">
+<div class="flex items-center gap-4">
+<img class="h-12 w-12 object-cover rounded-lg" data-alt="Silver wrist watch" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdHAl44TjWyIsMSKYI6TcFLgv1YjfEeUfTgWhti4P-Ltm4eWVEvG6y93iYVz1oYpWQrQdK7BnnChDzAPWvEeSCxdpPSAL6wDdxZWBAxMPgFN2S-UcPfVtvWWdzrtjMZU4Aj14s_71jqQDM-L4UxWWMCarGdrRCkOm10vDgq-OxjLWCMKI6vcaQG_APtLU5dkwJlB-aPctcTvYNC5xmaO9G4eIO5GBlnSaGsdrrpeFa3rkwl8E3ty5HQB7BIeJa_vGECeKIIR8hrjo"/>
+<span class="font-medium text-[#111318] dark:text-white">Classic Wristwatch</span>
+</div>
+</td>
+<td class="p-4 text-right">35</td>
+<td class="p-4 text-right">10</td>
+<td class="p-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 dark:bg-yellow-900/50 text-yellow-800 dark:text-yellow-300">
+                                            Low Stock
+                                        </span>
+</td>
+<td class="p-4 text-center">
+<button class="p-2 text-[#636f88] dark:text-gray-400 hover:text-primary dark:hover:text-primary rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Table Row 3 -->
+<tr class="hover:bg-background-light dark:hover:bg-background-dark/50 transition-colors">
+<td class="p-4"><input class="form-checkbox h-4 w-4 text-primary bg-background-light dark:bg-background-dark border-gray-300 dark:border-gray-600 rounded focus:ring-primary/50" type="checkbox"/></td>
+<td class="p-4">
+<div class="flex items-center gap-4">
+<img class="h-12 w-12 object-cover rounded-lg" data-alt="Black over-ear headphones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK-thFF-aqwDCfEsy44Oemb6ANNAJSIExJMm4cpAErX6QKFbHq1G6lXP0poZJAKeoLCcVyDdFuulGzmRvT3wvE-495CcsUpeyy8YY-xCvrBxzjRQJllxMUAV_o_vxFmo8i5YmveiJEDB8ToE4McmBsF_s7pMYHHQzLj4SjaIBTWF6-UoJtRr0GSthG9xfUBdbKXIEs-9OwuDZiMWWCppsMORqgYDtEgNQbQH5004h2womIo3I9kgWMLbwl_oKvj2ji9U0UP49Cr74"/>
+<span class="font-medium text-[#111318] dark:text-white">Wireless Headphones</span>
+</div>
+</td>
+<td class="p-4 text-right">0</td>
+<td class="p-4 text-right">50</td>
+<td class="p-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 dark:bg-red-900/50 text-red-800 dark:text-red-300">
+                                            Out of Stock
+                                        </span>
+</td>
+<td class="p-4 text-center">
+<button class="p-2 text-[#636f88] dark:text-gray-400 hover:text-primary dark:hover:text-primary rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Table Row 4 -->
+<tr class="hover:bg-background-light dark:hover:bg-background-dark/50 transition-colors">
+<td class="p-4"><input class="form-checkbox h-4 w-4 text-primary bg-background-light dark:bg-background-dark border-gray-300 dark:border-gray-600 rounded focus:ring-primary/50" type="checkbox"/></td>
+<td class="p-4">
+<div class="flex items-center gap-4">
+<img class="h-12 w-12 object-cover rounded-lg" data-alt="Vintage instant camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2cUH9c1rN29bEainEhZBmBrRJhRdzTws0qPCZROmf_PKJEpJTer20jzW8Q00Ycm8y_aPLH1VubBksVT4tQb3R_pcRuzW66VpSQM2Vt4FJN2IJGa-_bAJ_A2uPcbzGTJveBt0AKghlw9rVHcyEbZ4shzV1bYq3OmL4N2NXYAG1-sGpAWX5I9ubR6hafOksvNza6qXHJc8i59zxCw-8KCbrRR_nxev72-ErCLOoUR9H-OLnnWNsa1HqcIT35Lc8cinm5WHuPlYvmdU"/>
+<span class="font-medium text-[#111318] dark:text-white">Retro Polaroid Camera</span>
+</div>
+</td>
+<td class="p-4 text-right">450</td>
+<td class="p-4 text-right">12</td>
+<td class="p-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-700/50 text-gray-800 dark:text-gray-300">
+                                            Inactive
+                                        </span>
+</td>
+<td class="p-4 text-center">
+<button class="p-2 text-[#636f88] dark:text-gray-400 hover:text-primary dark:hover:text-primary rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex justify-between items-center mt-6">
+<p class="text-sm text-[#636f88] dark:text-gray-400">Showing 1-4 of 24 products</p>
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center h-9 w-9 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 hover:bg-background-light dark:hover:bg-background-dark text-[#636f88] dark:text-gray-400 transition-colors">
+<span class="material-symbols-outlined text-xl">chevron_left</span>
+</button>
+<button class="flex items-center justify-center h-9 w-9 rounded-lg bg-primary text-white text-sm font-medium">1</button>
+<button class="flex items-center justify-center h-9 w-9 rounded-lg bg-white dark:bg-gray-900 hover:bg-background-light dark:hover:bg-background-dark text-[#636f88] dark:text-gray-400 text-sm font-medium transition-colors">2</button>
+<button class="flex items-center justify-center h-9 w-9 rounded-lg bg-white dark:bg-gray-900 hover:bg-background-light dark:hover:bg-background-dark text-[#636f88] dark:text-gray-400 text-sm font-medium transition-colors">3</button>
+<button class="flex items-center justify-center h-9 w-9 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 hover:bg-background-light dark:hover:bg-background-dark text-[#636f88] dark:text-gray-400 transition-colors">
+<span class="material-symbols-outlined text-xl">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

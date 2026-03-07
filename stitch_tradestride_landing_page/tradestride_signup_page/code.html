@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TradeStride Signup Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#195de6",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark antialiased">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="flex flex-1 justify-center items-center p-4 sm:p-6 md:p-8">
+<div class="flex flex-col lg:flex-row w-full max-w-6xl mx-auto bg-white dark:bg-background-dark/50 rounded-xl shadow-sm overflow-hidden">
+<!-- Left Column: Hero Section -->
+<div class="w-full lg:w-1/2 p-8 sm:p-12 flex flex-col justify-center bg-gray-50 dark:bg-background-dark/20">
+<div class="flex flex-col gap-6 text-left">
+<h1 class="text-[#111318] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] sm:text-5xl">Join a Network of Verified Traders</h1>
+<h2 class="text-[#636f88] dark:text-gray-300 text-base font-normal leading-normal sm:text-lg">Connect with trusted wholesalers and retailers in minutes. Securely buy and sell products on a platform built for B2B.</h2>
+</div>
+<div class="mt-8">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Abstract visualization of a global supply chain network" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBoGlPcbu4VGr9gGYcAmoEnSRBb3Ip253SGLIhJYl3NsSotTAm-FnRlHhaJnItm_xsSKEbOqsLTlPSygFpNikMxwKSnggYa9rpYCTgGgCJbpzOpETWaBC0d1mswTvF5hf7Ed8HzLjeVNzzC2fW_aiItjj6KpUduGo_Nxv3GF5OwHFsGibSGsmmHPBXqZR7HiIemOheOV9Cne__pwGSJTiiDRJjY2eT9jMspx80DAvTsMJ2pN9NGi0Od6n0NB02bTmmZdGAz6h05dws");'></div>
+</div>
+</div>
+<!-- Right Column: Signup Form -->
+<div class="w-full lg:w-1/2 p-8 sm:p-12 flex flex-col justify-center">
+<div class="max-w-md mx-auto w-full">
+<div class="flex min-w-72 flex-col gap-2 mb-8">
+<p class="text-[#111318] dark:text-white text-3xl font-black leading-tight tracking-[-0.033em]">Create Your Account</p>
+<p class="text-[#636f88] dark:text-gray-300 text-base font-normal leading-normal">It's quick and easy to get started.</p>
+</div>
+<form class="flex flex-col gap-4">
+<!-- Full Name -->
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-[#111318] dark:text-gray-200 text-sm font-medium leading-normal pb-2">Full name</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111318] dark:text-white dark:bg-background-dark focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#dcdfe5] dark:border-gray-600 bg-white focus:border-primary h-12 placeholder:text-[#636f88] px-4 text-base font-normal leading-normal" placeholder="Enter your full name" type="text"/>
+</label>
+<!-- Email Address -->
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-[#111318] dark:text-gray-200 text-sm font-medium leading-normal pb-2">Email address</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111318] dark:text-white dark:bg-background-dark focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#dcdfe5] dark:border-gray-600 bg-white focus:border-primary h-12 placeholder:text-[#636f88] px-4 text-base font-normal leading-normal" placeholder="you@example.com" type="email"/>
+</label>
+<!-- Phone Number -->
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-[#111318] dark:text-gray-200 text-sm font-medium leading-normal pb-2">Phone number</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111318] dark:text-white dark:bg-background-dark focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#dcdfe5] dark:border-gray-600 bg-white focus:border-primary h-12 placeholder:text-[#636f88] px-4 text-base font-normal leading-normal" placeholder="Enter your phone number" type="tel"/>
+</label>
+<!-- Password -->
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-[#111318] dark:text-gray-200 text-sm font-medium leading-normal pb-2">Password</p>
+<div class="relative flex w-full items-center">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111318] dark:text-white dark:bg-background-dark focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#dcdfe5] dark:border-gray-600 bg-white focus:border-primary h-12 placeholder:text-[#636f88] px-4 pr-10 text-base font-normal leading-normal" placeholder="Enter your password" type="password"/>
+<div class="absolute right-3 flex items-center justify-center text-[#636f88] dark:text-gray-400 cursor-pointer">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</div>
+</div>
+</label>
+<!-- Confirm Password -->
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-[#111318] dark:text-gray-200 text-sm font-medium leading-normal pb-2">Confirm password</p>
+<div class="relative flex w-full items-center">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111318] dark:text-white dark:bg-background-dark focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#dcdfe5] dark:border-gray-600 bg-white focus:border-primary h-12 placeholder:text-[#636f88] px-4 pr-10 text-base font-normal leading-normal" placeholder="Confirm your password" type="password"/>
+<div class="absolute right-3 flex items-center justify-center text-[#636f88] dark:text-gray-400 cursor-pointer">
+<span class="material-symbols-outlined text-xl">visibility_off</span>
+</div>
+</div>
+</label>
+<!-- Account Type -->
+<fieldset class="flex flex-col">
+<legend class="text-[#111318] dark:text-gray-200 text-sm font-medium leading-normal pb-2">I am a</legend>
+<div class="grid grid-cols-2 gap-3">
+<label class="flex items-center justify-center cursor-pointer rounded-lg border border-[#dcdfe5] dark:border-gray-600 p-3 text-center text-sm font-medium text-[#111318] dark:text-gray-200 has-[:checked]:bg-primary/10 has-[:checked]:border-primary has-[:checked]:text-primary dark:has-[:checked]:text-white dark:has-[:checked]:bg-primary/30">
+<input class="sr-only" name="account-type" type="radio" value="retailer"/>
+<span>Retailer</span>
+</label>
+<label class="flex items-center justify-center cursor-pointer rounded-lg border border-[#dcdfe5] dark:border-gray-600 p-3 text-center text-sm font-medium text-[#111318] dark:text-gray-200 has-[:checked]:bg-primary/10 has-[:checked]:border-primary has-[:checked]:text-primary dark:has-[:checked]:text-white dark:has-[:checked]:bg-primary/30">
+<input class="sr-only" name="account-type" type="radio" value="wholesaler"/>
+<span>Wholesaler</span>
+</label>
+</div>
+</fieldset>
+<div class="mt-4">
+<button class="flex w-full min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary/50 dark:focus:ring-offset-background-dark">
+<span class="truncate">Create Account</span>
+</button>
+</div>
+<div class="mt-4 text-center">
+<p class="text-sm text-[#636f88] dark:text-gray-400">
+                                        Already have an account? 
+                                        <a class="font-medium text-primary hover:underline" href="#">Log in</a>
+</p>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

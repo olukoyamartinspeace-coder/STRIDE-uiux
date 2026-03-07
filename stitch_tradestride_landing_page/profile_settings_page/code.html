@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Profile Settings Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#195de6",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+             font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden text-gray-800 dark:text-gray-200">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-gray-700/60 bg-white dark:bg-background-dark px-6 lg:px-10 py-3">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-gray-900 dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold tracking-[-0.015em]">Wholesale Direct</h2>
+</div>
+<label class="hidden md:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-gray-500 dark:text-gray-400 flex bg-gray-100 dark:bg-gray-800 items-center justify-center pl-3 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-900 dark:text-white focus:outline-0 focus:ring-0 border-none bg-gray-100 dark:bg-gray-800 focus:border-none h-full placeholder:text-gray-500 dark:placeholder:text-gray-400 px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Search" value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-1 justify-end gap-6">
+<div class="hidden lg:flex items-center gap-8">
+<a class="text-sm font-medium leading-normal text-gray-800 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Dashboard</a>
+<a class="text-sm font-medium leading-normal text-gray-800 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Products</a>
+<a class="text-sm font-medium leading-normal text-gray-800 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Orders</a>
+<a class="text-sm font-medium leading-normal text-gray-800 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Messages</a>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined text-xl">notifications</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined text-xl">help</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAgxT2stK65uIvc9Gm20YQyAC8mNwYueZBmI6IhtENu8fLRJ-n4EFBASomF8s4FAPqkXa9dY1HH5lpdnaebHaimA6tndhEZBKM8MUkGOuYqICgqcBr0AiDoFFdlJzayP4i9bmCDJfBGG7ZO1-KPE7I8UaiK8rpoLlvDs9FfaprhkmGEkBgh07SjDCmQjuvkmWLQ-PMCbch1Pz2IdP5t4nUpFRJmCRYdsMNM67n-yH6363qaaDMcGUmhv9G_wzCrHUOZ9u5ooJzUULo");'></div>
+</div>
+</div>
+</header>
+<main class="flex flex-1 justify-center p-4 sm:p-6 lg:p-10">
+<div class="flex flex-col w-full max-w-7xl">
+<div class="flex flex-wrap justify-between gap-3 p-4 mb-6">
+<p class="text-gray-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] min-w-72">Account Settings</p>
+</div>
+<div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
+<!-- SideNavBar -->
+<aside class="w-full lg:w-64 flex-shrink-0">
+<div class="flex flex-col gap-2 bg-white dark:bg-gray-900/40 p-3 rounded-xl border border-gray-200 dark:border-gray-800">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 dark:bg-primary/20" href="#">
+<span class="material-symbols-outlined fill text-primary">person</span>
+<p class="text-primary text-sm font-medium leading-normal">Personal information</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/60" href="#">
+<span class="material-symbols-outlined text-gray-600 dark:text-gray-400">description</span>
+<p class="text-gray-800 dark:text-gray-300 text-sm font-medium leading-normal">Business documents</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/60" href="#">
+<span class="material-symbols-outlined text-gray-600 dark:text-gray-400">lock</span>
+<p class="text-gray-800 dark:text-gray-300 text-sm font-medium leading-normal">Change password</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/60" href="#">
+<span class="material-symbols-outlined text-gray-600 dark:text-gray-400">credit_card</span>
+<p class="text-gray-800 dark:text-gray-300 text-sm font-medium leading-normal">Payout details</p>
+</a>
+</div>
+</aside>
+<!-- Content Area -->
+<div class="flex-1">
+<div class="flex flex-col gap-8">
+<!-- Personal information Section -->
+<section class="bg-white dark:bg-gray-900/40 p-6 rounded-xl border border-gray-200 dark:border-gray-800">
+<h2 class="text-gray-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-5 border-b border-gray-200 dark:border-gray-700/60">Personal information</h2>
+<div class="pt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+<label class="flex flex-col">
+<p class="text-gray-800 dark:text-gray-300 text-sm font-medium leading-normal pb-2">Full Name</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800/50 h-12 placeholder:text-gray-400 px-4 text-base font-normal" value="John Doe"/>
+</label>
+<label class="flex flex-col">
+<p class="text-gray-800 dark:text-gray-300 text-sm font-medium leading-normal pb-2">Business Name</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800/50 h-12 placeholder:text-gray-400 px-4 text-base font-normal" value="Doe &amp; Co. Wholesale"/>
+</label>
+<label class="flex flex-col">
+<p class="text-gray-800 dark:text-gray-300 text-sm font-medium leading-normal pb-2">Email Address</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-500 dark:text-gray-400 focus:outline-0 focus:ring-0 border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 h-12 placeholder:text-gray-400 px-4 text-base font-normal cursor-not-allowed" readonly="" value="john.doe@business.com"/>
+</label>
+<label class="flex flex-col">
+<p class="text-gray-800 dark:text-gray-300 text-sm font-medium leading-normal pb-2">Phone Number</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800/50 h-12 placeholder:text-gray-400 px-4 text-base font-normal" value="+1 (555) 123-4567"/>
+</label>
+</div>
+<div class="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700/60 flex justify-end">
+<button class="flex max-w-xs cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-primary text-white gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-32 px-6 hover:bg-primary/90 disabled:bg-gray-300 disabled:cursor-not-allowed" disabled="">Save Changes</button>
+</div>
+</section>
+<!-- Change Password Section -->
+<section class="bg-white dark:bg-gray-900/40 p-6 rounded-xl border border-gray-200 dark:border-gray-800">
+<h2 class="text-gray-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-5 border-b border-gray-200 dark:border-gray-700/60">Change password</h2>
+<div class="pt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+<label class="flex flex-col md:col-span-2">
+<p class="text-gray-800 dark:text-gray-300 text-sm font-medium leading-normal pb-2">Current Password</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800/50 h-12 placeholder:text-gray-400 px-4 text-base font-normal" type="password" value="••••••••••••"/>
+</label>
+<label class="flex flex-col">
+<p class="text-gray-800 dark:text-gray-300 text-sm font-medium leading-normal pb-2">New Password</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800/50 h-12 placeholder:text-gray-400 px-4 text-base font-normal" placeholder="Enter new password" type="password"/>
+</label>
+<label class="flex flex-col">
+<p class="text-gray-800 dark:text-gray-300 text-sm font-medium leading-normal pb-2">Confirm New Password</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800/50 h-12 placeholder:text-gray-400 px-4 text-base font-normal" placeholder="Confirm new password" type="password"/>
+</label>
+</div>
+<div class="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700/60 flex justify-end">
+<button class="flex max-w-xs cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-primary text-white gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-32 px-6 hover:bg-primary/90">Update Password</button>
+</div>
+</section>
+<!-- Delete Account Section -->
+<section class="bg-white dark:bg-gray-900/40 p-6 rounded-xl border border-red-500/30 dark:border-red-500/50">
+<h2 class="text-red-600 dark:text-red-500 text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3">Delete account</h2>
+<p class="text-gray-600 dark:text-gray-400 text-sm mb-5">Once you delete your account, there is no going back. Please be certain.</p>
+<button class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 bg-red-600 text-white gap-2 text-base font-bold leading-normal min-w-32 px-5 hover:bg-red-700">Delete My Account</button>
+</section>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

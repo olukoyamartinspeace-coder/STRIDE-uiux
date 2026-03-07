@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TradeStride Message Center</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#195de6",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111318] dark:text-white font-display">
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar Navigation -->
+<aside class="w-64 border-r border-[#f0f2f4] dark:border-gray-800 bg-white dark:bg-background-dark flex flex-col">
+<div class="p-6 flex flex-col gap-8 h-full">
+<div class="flex gap-3 items-center">
+<div class="bg-primary size-10 rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<div class="flex flex-col">
+<h1 class="text-[#111318] dark:text-white text-base font-bold leading-none">TradeStride</h1>
+<p class="text-[#636f88] dark:text-gray-400 text-xs mt-1">Verified Retailer</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 flex-1">
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#f0f2f4] dark:hover:bg-gray-800 cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-gray-500">grid_view</span>
+<p class="text-sm font-medium">Dashboard</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#f0f2f4] dark:hover:bg-gray-800 cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-gray-500">inventory_2</span>
+<p class="text-sm font-medium">Inventory</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary cursor-pointer">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">chat_bubble</span>
+<p class="text-sm font-bold">Messages</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#f0f2f4] dark:hover:bg-gray-800 cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-gray-500">shopping_cart</span>
+<p class="text-sm font-medium">Orders</p>
+</div>
+<div class="mt-auto pt-4 border-t border-[#f0f2f4] dark:border-gray-800 flex flex-col gap-2">
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#f0f2f4] dark:hover:bg-gray-800 cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-gray-500">settings</span>
+<p class="text-sm font-medium">Settings</p>
+</div>
+</div>
+</nav>
+</div>
+</aside>
+<!-- Main Message Area -->
+<main class="flex-1 flex flex-col overflow-hidden">
+<!-- Top Navigation Bar -->
+<header class="h-16 flex items-center justify-between border-b border-[#f0f2f4] dark:border-gray-800 bg-white dark:bg-background-dark px-6">
+<div class="flex items-center gap-4">
+<h2 class="text-lg font-bold">Message Center</h2>
+<div class="h-4 w-px bg-gray-300 dark:bg-gray-700 mx-2"></div>
+<div class="flex items-center gap-2">
+<span class="size-2 rounded-full bg-green-500"></span>
+<span class="text-sm text-gray-500">12 Online Suppliers</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<button class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors relative">
+<span class="material-symbols-outlined text-gray-600 dark:text-gray-300">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-red-500 rounded-full border-2 border-white dark:border-background-dark"></span>
+</button>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-9 border border-gray-200 dark:border-gray-700" data-alt="Professional portrait of the user retailer profile" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAydEMCDALA4PL-t-uLYlsAgEtiHX15JrlQSW3AWoqkPHeOvPy9dubEj2DI-Bi4ao1Z56TsZWerJHAQkFiokC0qZ1ntUxQ3GFg4S3EG__CWdu85huSnYoS6HEQ53OyxXHRc--rG4hOGcz3Mtd4Wb_s0lC60kxWiHrPXWg9zSHuHyqHVPPL31CByvsNch7XVH7wCohr_JbWBTeuPwvhxvlWE2B0XA8MgQuOZcGkyZn-rGgtGCZyXDZvZFu-1EcQB_9L5rl3Ak-Osf1U");'></div>
+</div>
+</header>
+<!-- Messaging Layout -->
+<div class="flex-1 flex overflow-hidden">
+<!-- Conversation List -->
+<div class="w-80 flex flex-col border-r border-[#f0f2f4] dark:border-gray-800 bg-white dark:bg-background-dark">
+<div class="p-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-xl">search</span>
+<input class="w-full bg-[#f0f2f4] dark:bg-gray-800 border-none rounded-lg pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-primary" placeholder="Search conversations..." type="text"/>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto scrollbar-hide">
+<!-- Conversation Item: Active -->
+<div class="flex items-center gap-3 px-4 py-4 bg-primary/5 border-l-4 border-primary cursor-pointer">
+<div class="relative shrink-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="Supplier company logo Nexa Electronics" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDWL8y6duB4tDPVfCGx782N08hy5tV_bpCYAmy_pp2cAz1nzPBi1ebHDthvO_WBd-ts5RJNMNum6OO306DK8LvjnNIoAKSmcAbpoX7AsAhiGkbSG22TvIbR3XRtP558lADZxSY036zu6AdvenXOOU6iVuqXW8HvqqvFwvDjIn00Y1Y2p_0k62t1xNgGZa-rlxkVzWZjAQiut7HwuJc6BHyEO9eXT7axT7T-FTwJIym9lt272hW5WXNjkFOlRQ6foXKefsAHSTTiQ9o");'></div>
+<div class="absolute bottom-0 right-0 size-3 rounded-full bg-green-500 border-2 border-white dark:border-gray-900"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-0.5">
+<h3 class="text-sm font-bold truncate">Nexa Electronics</h3>
+<span class="text-[10px] text-primary font-medium">10:45 AM</span>
+</div>
+<p class="text-xs text-gray-600 dark:text-gray-400 truncate font-medium">You: Sounds good. Sending offer now...</p>
+</div>
+</div>
+<!-- Conversation Item -->
+<div class="flex items-center gap-3 px-4 py-4 hover:bg-gray-50 dark:hover:bg-gray-800/50 cursor-pointer border-l-4 border-transparent">
+<div class="relative shrink-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="Supplier company logo Global Textiles Ltd" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAk_SMuR3LGlFR7PhvlaYJaBoBT53acVopvshullLSBagi3d89vt2GiLeBaMiP4Tkgfmap10YqwjfB3HNBF5es8h8-bVJcxquvpyw_5BVImzyEmfec9UM8bgjcpTV-kj1gLu5-ofv9iw5XXjNICydwTL3nLY5ck8pB1vu86dp_g0pwGJ2Uv3kp_2lpUQj-AYMXHrLt5RtieJk9l14JXkjhOBBn_qYrDWrxbRHoqRaIHmdh6FPeI8u3BPyy-p22vT7kS80qdUXo211I");'></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-0.5">
+<h3 class="text-sm font-semibold truncate text-[#111318] dark:text-white">Global Textiles Ltd.</h3>
+<span class="text-[10px] text-gray-400 font-medium">9:12 AM</span>
+</div>
+<p class="text-xs text-gray-500 truncate">The latest sample pack is ready for shipment.</p>
+</div>
+<div class="size-2 rounded-full bg-primary shrink-0"></div>
+</div>
+<!-- Conversation Item -->
+<div class="flex items-center gap-3 px-4 py-4 hover:bg-gray-50 dark:hover:bg-gray-800/50 cursor-pointer border-l-4 border-transparent">
+<div class="relative shrink-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="Profile of a wholesale agent" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC9IdwTwJ4NLfMpCSCVm0xyoesUA8ZQ9b8Je-NbV8mumMg4Cf2hXQcyLpUdVSFiyVksrLZx-SAUcEmh3gz4LcwHlDJm_1jSmtSBPuzpzwEwYntrusB7vgHtmMKDPOILKFt2DesPaCcFJKGwY1zDw6B5QI7GKc51bIo2og0W2JEgf4uSK7DPA7fgj3qFw5ndFrcsnyNpgWB6G__Dn9OY0XcCwNL-xPengxbyUUvZseXj41D5PAuXFN35-7KJRIST8RYvIm9kcTjVxgg");'></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-0.5">
+<h3 class="text-sm font-semibold truncate text-[#111318] dark:text-white">Marcus Chen</h3>
+<span class="text-[10px] text-gray-400 font-medium">Yesterday</span>
+</div>
+<p class="text-xs text-gray-500 truncate">I've attached the MOQ requirements below.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Chat Pane -->
+<div class="flex-1 flex flex-col bg-white dark:bg-background-dark">
+<!-- Chat Header -->
+<div class="h-16 flex items-center justify-between px-6 border-b border-[#f0f2f4] dark:border-gray-800">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Company profile picture for Nexa Electronics" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDaRxvLB5_Vzt9W4ZikoFhllJltfekCegAJ0SG9Zq-PiQfVm8Yhbsg6cngn9w4cEr0YvQav7nQBHaDqNG6gU_waN-_LL7B3R7C4Dl1L9Sx8m9rRy1OixpO2wTa6xR8x21VEgPJAVN0OHjelFRtW3IEgVsMm54nVXTA5nhBVAKjlBmtaMMlwXIQ7XhbR5SWkc9PiFOUeNZHnhhwQLoSIEnZF6c2pHQO7DIDEhJLMsYMu2CyxcK8B1008i-iuu5WyCx4B7AkG3IZseL4");'></div>
+<div>
+<h3 class="text-base font-bold flex items-center gap-1.5">
+                                    Nexa Electronics
+                                    <span class="material-symbols-outlined text-blue-500 text-sm" style="font-variation-settings: 'FILL' 1">verified</span>
+</h3>
+<p class="text-xs text-green-500 font-medium">Online • Response time: &lt; 1h</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-gray-200 dark:border-gray-700 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined text-base">person</span>
+                                Profile
+                            </button>
+<button class="p-2 rounded-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined text-base">more_horiz</span>
+</button>
+</div>
+</div>
+<!-- Chat Messages Area -->
+<div class="flex-1 overflow-y-auto p-6 flex flex-col gap-6 scrollbar-hide">
+<!-- Date Separator -->
+<div class="flex justify-center">
+<span class="text-[11px] font-bold text-gray-400 uppercase tracking-widest bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full">Today</span>
+</div>
+<!-- Incoming Message -->
+<div class="flex gap-3 max-w-[70%]">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-8 shrink-0 mt-1" data-alt="Supplier avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBP1PjjmnN7ap2hqAIubTHLyumuNGBEYncOnt-VNWQGGDbQRuJZ5nyuWT2ybK3Go-xW7PC_h9JD2wVe_jrbI3Qxd9Suw4FdqCdJQPavNsTW49IcEPj_1HGJCNLsegpbW_8DwJrl3mOzw1gl7L4iLWSgeDg9DKA3I2y5ZPjhQavR2g2rAa8lkPX7OAy-iPaswrMBajBl9oaXkSvhvWGw_Tkm5g93NV5wNv4v6Dx-MS3OODn1TAukbUDDCtm_-NyC0hKU1r9rpDWFQOQ");'></div>
+<div class="flex flex-col gap-1.5">
+<div class="bg-[#f0f2f4] dark:bg-gray-800 p-3 rounded-2xl rounded-tl-none text-sm leading-relaxed">
+                                    Hi there! I saw you were looking at the bulk pricing for the AX-500 components. We currently have 5,000 units in stock.
+                                </div>
+<span class="text-[10px] text-gray-400 px-1">10:42 AM</span>
+</div>
+</div>
+<!-- Outgoing Message -->
+<div class="flex flex-col items-end gap-1.5 ml-auto max-w-[70%]">
+<div class="bg-primary text-white p-3 rounded-2xl rounded-tr-none text-sm leading-relaxed">
+                                Great. I'm interested in 2,500 units. Could you do a better price if we commit to a monthly order?
+                            </div>
+<div class="flex items-center gap-1.5 px-1">
+<span class="text-[10px] text-gray-400">10:44 AM</span>
+<span class="material-symbols-outlined text-blue-500 text-xs">done_all</span>
+</div>
+</div>
+<!-- Offer Builder Tool Integrated in Chat -->
+<div class="flex flex-col gap-1.5 max-w-[400px] ml-auto">
+<div class="bg-white dark:bg-gray-800 border-2 border-primary rounded-xl overflow-hidden shadow-lg">
+<div class="bg-primary/5 p-4 border-b border-primary/10">
+<h4 class="text-sm font-bold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">edit_note</span>
+                                        Pending Wholesale Offer
+                                    </h4>
+</div>
+<div class="p-4 flex flex-col gap-3">
+<div class="flex justify-between items-center text-sm">
+<span class="text-gray-500">Item</span>
+<span class="font-semibold">AX-500 Micro-Controller</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-gray-500">Quantity</span>
+<span class="font-semibold">2,500 Units</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-gray-500">Unit Price</span>
+<div class="flex items-center gap-1.5">
+<span class="text-xs line-through text-gray-400">$12.50</span>
+<span class="font-bold text-green-600 dark:text-green-400">$10.75</span>
+</div>
+</div>
+<div class="h-px bg-gray-100 dark:bg-gray-700 my-1"></div>
+<div class="flex justify-between items-center">
+<span class="text-sm font-bold">Total Offer</span>
+<span class="text-lg font-black text-primary">$26,875.00</span>
+</div>
+<div class="grid grid-cols-2 gap-2 mt-2">
+<button class="py-2 text-xs font-bold border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">Edit Details</button>
+<button class="py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-blue-700 transition-colors">Send Offer</button>
+</div>
+</div>
+</div>
+<span class="text-[10px] text-gray-400 self-end mr-1">Draft • Visible only to you</span>
+</div>
+</div>
+<!-- Message Input -->
+<div class="p-6 border-t border-[#f0f2f4] dark:border-gray-800">
+<div class="bg-[#f0f2f4] dark:bg-gray-800 rounded-xl p-2">
+<div class="flex items-center gap-2 px-2 py-1 border-b border-gray-200 dark:border-gray-700 mb-2">
+<button class="p-1.5 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors text-gray-500">
+<span class="material-symbols-outlined text-xl">attach_file</span>
+</button>
+<button class="p-1.5 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors text-gray-500">
+<span class="material-symbols-outlined text-xl">image</span>
+</button>
+<button class="p-1.5 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors text-gray-500">
+<span class="material-symbols-outlined text-xl">description</span>
+</button>
+<div class="h-6 w-px bg-gray-300 dark:bg-gray-600 mx-1"></div>
+<button class="flex items-center gap-1.5 px-3 py-1 bg-primary/10 text-primary rounded-lg text-xs font-bold hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-base">add_box</span>
+                                    New Offer
+                                </button>
+</div>
+<div class="flex items-end gap-2 p-2">
+<textarea class="flex-1 bg-transparent border-none focus:ring-0 resize-none text-sm h-12 py-1 scrollbar-hide" placeholder="Type your message here..."></textarea>
+<button class="size-10 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-blue-700 shadow-md shadow-primary/20 transition-all active:scale-95">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+<p class="text-center text-[10px] text-gray-400 mt-3 flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+                            All payments made through TradeStride are protected and secure.
+                        </p>
+</div>
+</div>
+<!-- Right Utility Panel (Offer Builder Detail) -->
+<div class="w-72 border-l border-[#f0f2f4] dark:border-gray-800 bg-white dark:bg-background-dark p-6 hidden xl:flex flex-col gap-6">
+<div>
+<h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">Quick Actions</h4>
+<div class="flex flex-col gap-2">
+<button class="flex items-center justify-between w-full p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-primary transition-colors text-left group">
+<div class="flex flex-col">
+<span class="text-sm font-bold">Request Invoice</span>
+<span class="text-[10px] text-gray-500">For ongoing orders</span>
+</div>
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary">receipt</span>
+</button>
+<button class="flex items-center justify-between w-full p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-primary transition-colors text-left group">
+<div class="flex flex-col">
+<span class="text-sm font-bold">Schedule Call</span>
+<span class="text-[10px] text-gray-500">Sync with supplier</span>
+</div>
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary">calendar_today</span>
+</button>
+</div>
+</div>
+<div>
+<h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">Contract Details</h4>
+<div class="bg-[#f0f2f4] dark:bg-gray-800 rounded-xl p-4 flex flex-col gap-3">
+<div class="flex items-center gap-3">
+<div class="size-8 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-lg flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-lg">local_shipping</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-bold">Standard Shipping</span>
+<span class="text-[10px] text-gray-500">3-5 Business Days</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="size-8 bg-purple-100 dark:bg-purple-900/30 text-purple-600 rounded-lg flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-lg">credit_score</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-bold">Payment Terms</span>
+<span class="text-[10px] text-gray-500">Net 30 Available</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-auto">
+<div class="bg-primary/5 rounded-xl p-4 border border-primary/20">
+<h5 class="text-sm font-bold text-primary mb-2">Need Help?</h5>
+<p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">TradeStride Support is available 24/7 for dispute resolution or technical issues.</p>
+<button class="mt-3 text-xs font-bold text-primary flex items-center gap-1">
+                                Contact Support <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>
